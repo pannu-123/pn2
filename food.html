@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pranav's Food Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: #fff8f0;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: #ff6347;
+      padding: 20px;
+      text-align: center;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #333;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ff6347;
+    }
+
+    section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .menu-item {
+      display: inline-block;
+      width: 200px;
+      margin: 15px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 15px;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 10px;
+    }
+
+    form input, form textarea {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      background: #ff6347;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #ff6347;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Welcome to Pranav's Food Hub</h1>
+    <p>Delicious | Fresh | Hygienic</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h2>Home</h2>
+    <p>Enjoy mouth-watering dishes made with love by Pranav!</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Hi, I'm Pranav, a passionate food lover who enjoys creating tasty dishes. This website is a reflection of my love for cooking and sharing delightful experiences.</p>
+  </section>
+
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-item">
+      <h3>Spicy Pizza</h3>
+      <p>₹249</p>
+    </div>
+    <div class="menu-item">
+      <h3>Paneer Burger</h3>
+      <p>₹199</p>
+    </div>
+    <div class="menu-item">
+      <h3>Masala Dosa</h3>
+      <p>₹129</p>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="https://source.unsplash.com/200x150/?pizza" alt="Pizza">
+      <img src="https://source.unsplash.com/200x150/?burger" alt="Burger">
+      <img src="https://source.unsplash.com/200x150/?indian-food" alt="Indian Food">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required><br>
+      <input type="email" placeholder="Your Email" required><br>
+      <textarea rows="4" placeholder="Your Message"></textarea><br>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <button id="topBtn" onclick="scrollToTop()">↑</button>
+
+  <footer>
+    <p>© 2025 Pranav's Food Hub. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Show scroll-to-top button
+    window.onscroll = function() {
+      document.getElementById('topBtn').style.display = window.scrollY > 300 ? 'block' : 'none';
+    };
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
